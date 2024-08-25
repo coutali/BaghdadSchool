@@ -1,0 +1,119 @@
+#toTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+  @media (max-width: 768px) {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+.navbar {
+  background-color: #eee;
+  color: #072a3e;
+}
+
+.hero {
+  height: calc(100vh - 126px);
+  @media (max-width: 768px) {
+    height: calc(100vh - 101px);
+  }
+  background-image: url("./assets/heroBG.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.fullHeight {
+  min-height: 100vh !important;
+}
+
+.towersImg {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.titleColor {
+  color: #3663fc;
+  font-weight: bold;
+}
+
+.title {
+  color: #3663fc;
+  font-weight: bold;
+  font-size: 2.5rem;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.appFeatuers {
+  background-color: #3663fc;
+  color: white;
+}
+.card {
+  border: none !important;
+}
+
+.showImage {
+  height: 300px !important;
+  object-fit: contain;
+  @media (min-width: 768px) {
+    height: 400px !important;
+  }
+}
+
+.input:user-valid {
+  outline: red !important;
+}
+
+/* form {
+  background-color: #072a3e;
+  border-radius: 15px;
+  padding: 20px;
+  height: 100% !important;
+} */
+
+footer {
+  background-color: #3663fc;
+  color: white;
+  a {
+    color: white !important;
+    cursor: pointer;
+  }
+}
+
+.heroSec {
+  animation: starter 2.5s;
+  animation-delay: 0.5s;
+}
+
+/* Animation */
+
+@keyframes starter {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0.5;
+  }
+  70% {
+    transform: translateY(5px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
