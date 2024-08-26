@@ -7,8 +7,7 @@
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  height: 50px;
   margin: 0 auto;
   display: block;
   @media (max-width: 768px) {
@@ -20,16 +19,6 @@
 .navbar {
   background-color: #eee;
   color: #072a3e;
-}
-
-.hero {
-  height: calc(100vh - 126px);
-  @media (max-width: 768px) {
-    height: calc(100vh - 101px);
-  }
-  background-image: url("./assets/heroBG.jpeg");
-  background-position: center;
-  background-size: cover;
 }
 
 .fullHeight {
@@ -80,12 +69,30 @@ ul {
   outline: red !important;
 }
 
-/* form {
-  background-color: #072a3e;
-  border-radius: 15px;
-  padding: 20px;
-  height: 100% !important;
-} */
+.hero {
+  @media (max-width: 768px) {
+    height: calc(100dvh - 26px) !important;
+  }
+  height: calc(100dvh - 76px) !important;
+  background-image: url("./assets/heroBG.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  > .infoHolder {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #072a3e;
+    padding: 20px;
+    border-radius: 20px;
+    @media (max-width: 768px) {
+      padding: 10px;
+    }
+    img {
+      height: 50px;
+      margin-right: auto;
+      display: block;
+    }
+  }
+}
 
 footer {
   background-color: #3663fc;
