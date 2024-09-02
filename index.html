@@ -355,6 +355,15 @@
 									/>
 								  </a>
 								</div>
+								<div class="col-12 d-flex align-items-center w-md-100 justify-content-center mt-4">
+									<a
+									id="schBtn"
+									class="btn btn-warning text-dark"
+									href=""
+								  >
+								  تحميل تطبيق الاندرويد مباشرتاَ
+								  </a>
+								</div>
 							</div>
 						</div>
 						<div class="container">
@@ -383,6 +392,15 @@
 									  src="./assets/images/buttons/appStore.svg"
 									  alt=""
 									/>
+								  </a>
+								</div>
+								<div class="col-12 d-flex align-items-center w-md-100 justify-content-center mt-4">
+									<a
+									id="kidsBtn"
+									class="btn btn-warning text-dark"
+									href=""
+								  >
+								  تحميل تطبيق الاندرويد مباشرتاَ
 								  </a>
 								</div>
 							</div>
@@ -441,6 +459,44 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }
+
+	  let kidsUrl = null;
+	  let schoolUrl = null;
+
+	  async function getKidsUrl() {
+  const url = "https://api.lm-kids.com/api/mobile/app_versions/روضة و حضانة البغدادية الاهلية";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+	kidsUrl = json.content_url + json.results.url;
+	document.querySelector("#kidsBtn").href = kidsUrl;
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+	  async function getSchUrl() {
+  const url = "https://api.lm-uat.com/api/mobile/app_versions/بغداد البرطانية";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+	schoolUrl = json.content_url + json.results.url;
+	document.querySelector("#schBtn").href = schoolUrl;
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+getKidsUrl();
+getSchUrl();
 
     </script>
 
